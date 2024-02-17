@@ -18,11 +18,13 @@ function TravelInfo({travelInfo}) {
 
     const [additionalInformation, setAdditionalInformation] = useState(null)
 
-    useEffect(() => {
-        import(`../../cheapTripData/inner_jsons/${travelInfo.route}.json`)
-            .then((res) => setAdditionalInformation(res.default))
-            .catch(_ => null);
-    }, [travelInfo.route])
+
+    //TODO: Fix inner_json data
+    // useEffect(() => {
+    //     import(`../../cheapTripData/inner_jsons/${travelInfo.route}.json`)
+    //         .then((res) => setAdditionalInformation(res.default))
+    //         .catch(_ => null);
+    // }, [travelInfo.route])
 
     return (
         <div>
