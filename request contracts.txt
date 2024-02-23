@@ -1,0 +1,24 @@
+api.js: 
+getCurrencies - is not using anywhere because there is no implementation of feature to compare currencies
+
+data-service.js: 
+
+1. First of all data services requests - creating new data base from .env-cmdrc file from "REACT_APP_DB_NEW" field.
+2. getTransfersByFromCityId func - this request is called when user is on page bus transfers as passenger. user should type or select city from list and click 'Apply', after that applyFilterFromCityIdAction is called and then proceed id of the city to firebase request. if request is successful it should return all possible trips from selected city (?)
+3. uploadTransfer - this request is called when user is on page bus transfers as a carrier. this function is called when form is submitted, calling  without any action - should be changed. then if request is successful - this ride should be added to collection of rides in firebase.
+3. uploadNewTransfer - is in one of the transfers actions, but this action is not called anywhere else. technically it should call getTransfersByFromCityId and show new transfer by passed data.
+4. getTransfers - this request is called when user is on page bus transfers as passenger and city is selected. should return limited number of transfers and sorted by some field(now it is _id) and field 'nextTransfers' and transfers set to array of transfers.
+5. getNextTransfers - this request is called when user is on page bus transfers as passenger, city selected and data is loaded. under data is button to show more transfers if possible from last of the showed transfers. when it's done field 'nextTransfers' in transfers-reducer is set to empty array.
+
+
+Not implemented functionality:
+
+Personal account:
+
+1. getMyLots - if bought lots of user in firebase - return them, otherwise return empty array
+2 getLotById - if lot was in firebase by id return destructive obj from data of this obj
+3. deleteLotByid - go to base of buyers of lot by its id, then unsubscribe user (provided by uid) from this lot, then delete bought lot from user
+4. checkBuying - check if user existing: if not - return false, else check if the user is present in buyers of this lot and return false or true
+5. subscribeOnLot - first of all - check if user already bought this lot, then try to get lot from firebase. (if user trying to buy more lots than available in total - throw error)???
+6. unsubscribeFromLot - trying to remove user from lot in base
+7. getMyGroups - ???

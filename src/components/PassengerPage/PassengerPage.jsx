@@ -28,13 +28,13 @@ export default function PassengerPage() {
   const data = useSelector(getTransfersData);
   const loading = useSelector(getLoading);
 
-  console.log("PassengerPage", data);
 
   const addNextHandler = () => {
     dispatch(getNextTransfersAction(data.transfers));
   };
 
   useEffect(() => {
+    console.log('test')
     dispatch(getTransfersAction());
   }, [dispatch]);
 
