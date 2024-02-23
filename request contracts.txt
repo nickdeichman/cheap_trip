@@ -22,3 +22,7 @@ Personal account:
 5. subscribeOnLot - first of all - check if user already bought this lot, then try to get lot from firebase. (if user trying to buy more lots than available in total - throw error)???
 6. unsubscribeFromLot - trying to remove user from lot in base
 7. getMyGroups - ???
+
+Test services:
+
+1. getUser - getting user by uid
