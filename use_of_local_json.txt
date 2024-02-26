@@ -1,0 +1,36 @@
+AutoCompleteSection.jsx:
+    direct_routes.json
+      1. when we need to find routes from-to, when we need to get filtered routes by city
+    locations.json:
+      1. using when we need to get city data, get id by city 'from', set cities from array to list filtered by id
+
+CheapTripSearch.jsx:
+    routes.json, fixed_routes.json, flying_routes.json:
+      1. the global const variable 'routes' created from them
+      2. routes for render consists of data from them by their keys
+    locations.json:
+      1. when locations is not empty returning sorted keys of locations
+      2. for creating of 'from options' and 'to options'
+
+RouteCard.jsx: 
+    direct_routes.json:
+      1. if it's not empty creates a travel info and set it to the useState variable
+    locations.json:
+      1. using in view part of component
+
+TravelInfo.jsx:
+    locations.json:
+      1. using in view part of component
+
+CarrierComponent.jsx:
+    cities.json: 
+      1. used for filling array of cities in some of languages
+
+Transfer.jsx:
+    cities.json: 
+      1. used for define 'cityFrom' by id from data of json
+      2. used for define 'cityTo' by id from data of json
+cities.js:
+    cities.json: 
+      1. used for util functions comprehended this data 
+
